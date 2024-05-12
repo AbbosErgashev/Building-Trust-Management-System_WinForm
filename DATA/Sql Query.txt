@@ -1,0 +1,27 @@
+Data Source= ;Initial Catalog= ;Integrated Security=True;Encrypt=False
+
+
+
+CREATE TABLE [dbo].[Company] (
+    [CompanyID]   INT          IDENTITY (1, 1) NOT NULL,
+    [ProjectID]   INT          NULL,
+    [CompanyName] VARCHAR (50) NULL,
+    PRIMARY KEY CLUSTERED ([CompanyID] ASC)
+);
+
+CREATE TABLE [dbo].[Project] (
+    [ProjectID]      INT          IDENTITY (1, 1) NOT NULL,
+    [TaskID]         INT          NULL,
+    [ProjectName]    VARCHAR (50) NULL,
+    [SubmissionDate] DATE         NULL,
+    PRIMARY KEY CLUSTERED ([ProjectID] ASC)
+);
+
+CREATE TABLE [dbo].[Task] (
+    [TaskID]      INT           IDENTITY (1, 1) NOT NULL,
+    [TaskName]    VARCHAR (50)  NULL,
+    [Description] VARCHAR (100) NULL,
+    [Price]       INT           NULL,
+    PRIMARY KEY CLUSTERED ([TaskID] ASC)
+);
+
